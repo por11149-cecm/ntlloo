@@ -1,0 +1,42 @@
+{
+    "numPreliquidacion": "PPif7RDYxI636Qv2GYX5LixycZAz9uDWHfmo4jEjfPl+AbDMODSNUA4fqwf6VgSyKyjjebr+BwqOym8qWsfq84V3e2dXNN3AhCpd/PiEgKWB9mJf597Mqj3EmsDT4o0QExYJOQOpbYyq/ZKJOHwMuImGI2vDPEbCWM6YmWGRKcT74/5ZZNcKk5l5GwRITpHbl7RjfcJ0R5J4rB43TQ53pgI79ZuyRQrzWW72y8HZVlYAJm8mSFrbg4cbuPEympakyl68hgCikzcojDmUaisrRmH1aaUWd+KYihuWFVOuSlO0L6aPopSiAq6JDgC28z8wusv6iETvrrnsEmDcC74HJw==",
+    "codCuenta": "Ckic8mVhDLNqvhndPGv5XvOrNgDbk1d/MpqGr74TNKrZCIfwCwlEa3pwxwuyYtu88fmzVX4hyvb2uFAG0GVIo804D4T09blVup5oD+Qxo9Ww6iPRTzODVvU5wzHY/jRjNjUtBLYt6ElV7lpM6pw7kPHXzTp25sax5brU9VDeAd1iLVXx2+ZDtDC9CikLdDDXxlqg0TWCrrz2wmXgutHsfTI9lubTLwZsmXmlhzV12eawIvetPqp2DDRkNQTGa+Oc7u4UfZ9z7qChRz0jSw6ZQscpiJdfulUGXy2NYQ3KvGd/PfVzWzC2ZjnrHSLIrgSsvN0VaX0cIYJ+CgMVoSsHtA==",
+    "formaPago": "K",
+    "numCuentaBanc": "",
+    "tipoCuentaBanc": "",
+    "codBanco": "",
+    "tipoIdBeneficiario": "2",
+    "idBeneficiario": "80845296",
+    "nombreBeneficiario": "OSCAR IVAN RADA OSORIO",
+    "codAgencia": "",
+    "tipoSolicitud": 3,
+    "valorRetiro": 10000,
+    "tipoRetiro": 2,
+    "objetivos": [
+        {
+            "codObjetivo": "5",
+            "codInversion": "177",
+            "numAporte": 0,
+            "tipoSaldo": "0",
+            "fechaPago": 20220715,
+            "valorEnt": 10000
+        }
+    ],
+    "codCuentaTraslado": "0",
+    "codPlantilla": "00000",
+    "tipoSaldo": 1,
+    "motivoRet": 10,
+    "horaRetiro": "16:04",
+    "codObjetivo": "",
+    "codInversion": "",
+    "codAuditoria": "02",
+    "ordenAportes": 0
+}
+Response:
+{
+  "status": {
+    "statusCode": 406.0,
+    "statusDesc": "Error en los parametros de entrada, los datos no son validos."
+  },
+  "content": null
+}
