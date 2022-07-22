@@ -1,0 +1,21 @@
+{
+    "codCuenta": "643859",
+    "datosEntradaDetalle": [
+        {
+            "anoAporte": "2019",
+            "declarado": "SI",
+            "montoCapital": 108.87,
+            "numAporte": 50941361,
+            "numSolicitud": 15274125,
+            "tipoSeleccion": "APORTE"
+        },
+        {
+            "anoAporte": "2021",
+            "declarado": "NO",
+            "montoCapital": 19545.85,
+            "numAporte": 52828875,
+            "numSolicitud": 15274125,
+            "tipoSeleccion": "APORTE"
+        }
+    ]
+}
