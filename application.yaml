@@ -1,0 +1,111 @@
+management:
+  endpoints:
+    web:
+      base-path: ${application.mobile.api.path}/actuator
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: ${application.mobile.api.path}/swagger/swagger2.json
+application:
+  bus:
+
+    baseUrl: ${BASEURL}
+    
+    algorthm: 'RSA'
+
+    consultarCuentasAsociadas: {
+      serviceTransaction: '${SERVICETRANSACTIONCONSULTARCUENTASASOCIADAS}',
+      serviceId: '${SERVICEIDCONSULTARCUENTASASOCIADAS}',
+      RqUID: '${RQUIDCONSULTARCUENTASASOCIADAS}',
+      headerRQ: '${HEADERRQCONSULTARCUENTASASOCIADAS}',
+      userID: '${USERIDCONSULTARCUENTASASOCIADAS}'
+    }
+
+    consultarObjetivosAportes: {
+      serviceTransaction: '${SERVICETRANSACTIONCONSULTAROBJETIVOSAPORTES}',
+      serviceId: '${SERVICEIDCONSULTAROBJETIVOSAPORTES}',
+      RqUID: '${RQUIDCONSULTAROBJETIVOSAPORTES}',
+      headerRQ: '${HEADERRQCONSULTAROBJETIVOSAPORTES}',
+      userID: '${USERIDCONSULTAROBJETIVOSAPORTES}'
+    }
+
+    oficinasPorCiudad: {
+      serviceTransaction: '${SERVICETRANSACTIONOFICINASPORCIUDAD}',
+      serviceId: '${SERVICEIDOFICINASPORCIUDAD}',
+      RqUID: '${RQUIDOFICINASPORCIUDAD}',
+      headerRQ: '${HEADERRQOFICINASPORCIUDAD}',
+      userID: '${USERIDOFICINASPORCIUDAD}'
+    }
+
+    consultarCiudades: {
+      serviceTransaction: '${SERVICETRANSACTIONCONSULTARCIUDADES}',
+      serviceId: '${SERVICEIDCONSULTARCIUDADES}',
+      RqUID: '${SERVICEIDCONSULTARCIUDADES}',
+      headerRQ: '${HEADERRQCONSULTARCIUDADES}',
+      userID: '${RQUIDCONSULTARCIUDADES}'
+    }
+    
+    saldosDisponibles: {
+      serviceTransaction: '${SERVICETRANSACTIONSALDOSDISPONIBLES}',
+      serviceId: '${SERVICEIDSALDOSDISPONIBLES}',
+      RqUID: '${RQUIDSALDOSDISPONIBLES}',
+      headerRQ: '${HEADERRQSALDOSDISPONIBLES}',
+      userID: '${USERIDCONSULTARCIUDADES}'
+    }
+    
+    saldoDisponiblePorFecha: {
+      serviceTransaction: '${SERVICETRANSACTIONSALDODISPONIBLEPORFECHA}',
+      serviceId: '${SERVICEIDSALDODISPONIBLEPORFECHA}',
+      RqUID: '${RQUIDSALDODISPONIBLEPORFECHA}',
+      headerRQ: '${HEADERRQSALDODISPONIBLEPORFECHA}',
+      userID: '${USERIDSALDODISPONIBLEPORFECHA}'
+    }
+
+    alternativasInversion: {
+      serviceTransaction: '${SERVICETRANSACTIONALTERNATIVASINVERSION}',
+      serviceId: '${SERVICEIDALTERNATIVASINVERSION}',
+      RqUID: '${RQUIDALTERNATIVASINVERSION}',
+      headerRQ: '${HEADERRQALTERNATIVASINVERSION}',
+      userID: '${USERIDALTERNATIVASINVERSION}'
+    }
+    
+    saldoDiscriminado: {
+      serviceTransaction: '${SERVICETRANSACTIONSALDODISCRIMINADO}',
+      serviceId: '${SERVICEIDSALDODISCRIMINADO}',
+      RqUID: '${RQUIDSALDODISCRIMINADO}',
+      headerRQ: '${HEADERRQSALDODISCRIMINADO}',
+      userID: '${USERIDSALDODISCRIMINADO}'
+    }
+    
+    unidadesAlternativas: {
+      serviceTransaction: '${SERVICETRANSACTIONUNIDADESALTERNATIVAS}',
+      serviceId: '${SERVICEIDUNIDADESALTERNATIVAS}',
+      RqUID: '${RQUIDUNIDADESALTERNATIVAS}',
+      headerRQ: '${HEADERRQUNIDADESALTERNATIVAS}',
+      userID: '${USERIDUNIDADESALTERNATIVAS}'
+    }
+    
+    preliquidar: {
+      serviceTransaction: '${SERVICETRANSACTIONPRELIQUIDAR}',
+      serviceId: '${SERVICEIDPRELIQUIDAR}',
+      RqUID: '${RQUIDPRELIQUIDAR}',
+      headerRQ: '${HEADERRQPRELIQUIDAR}',
+      userID: '${USERIDPRELIQUIDAR}'
+    }
+    
+    guardarAporte: {
+      serviceTransaction: '${SERVICETRANSACTIONGUARDARAPORTE}',
+      serviceId: '${SERVICEIDGUARDARAPORTE}',
+      RqUID: '${RQUIDGUARDARAPORTE}',
+      headerRQ: '${HEADERRQGUARDARAPORTE}',
+      userID: '${USERIDGUARDARAPORTE}'
+    }
+
+    consultarRetencion: {
+      serviceTransaction: '${SERVICETRANSACTIONCONSULTARAPORTE}',
+      serviceId: '${SERVICEIDCONSULTARAPORTE}',
+      RqUID: '${RQUIDCONSULTARAPORTE}',
+      headerRQ: '${HEADERRQCONSULTARAPORTE}',
+      userID: '${USERIDCONSULTARAPORTE}'
+    }
