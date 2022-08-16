@@ -1,0 +1,189 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-seguridad
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-seguridad
+  template:
+    metadata:
+      labels:
+        app: ms-seguridad
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      volumes: 
+        - name: secrets-store
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: zuepvcepkv		
+      containers:
+        - name: ms-seguridad
+          image: azuepvgoydvpsptacr.azurecr.io/NAME_ARTIFACT:VERSION
+          volumeMounts:
+             - name: secrets-store
+               mountPath: "/mnt/secrets-store" 
+               readOnly: true
+          resources:
+            requests:
+              cpu: 202m
+              memory: 240Mi
+            limits:
+              cpu: 350m
+              memory: 356Mi
+          ports:
+            - containerPort: 8080
+          env:
+            - name: URL-EVENTGRID
+              valueFrom: 
+                secretKeyRef:
+                  name: url-eventgrid
+                  key: URL-EVENTGRID
+            - name: KEYEVENTGRID
+              valueFrom: 
+                secretKeyRef:
+                  name: keyeventgrid
+                  key: KEYEVENTGRID
+            - name: BDAPPMOBILE
+              valueFrom: 
+                secretKeyRef:
+                  name: bdappmobile
+                  key: BDAPPMOBILE
+            - name: USERDBAPPMOBILE
+              valueFrom: 
+                secretKeyRef:
+                  name: userdbappmobile
+                  key: USERDBAPPMOBILE
+            - name: PASSWORDDBAPPMOBILE
+              valueFrom: 
+                secretKeyRef:
+                  name: passworddbappmobile
+                  key: PASSWORDDBAPPMOBILE
+            - name: SERVICETRANSACTIONTYC
+              valueFrom: 
+                secretKeyRef:
+                  name: servicetransactiontyc
+                  key: SERVICETRANSACTIONTYC
+            - name: SERVICEIDTYC
+              valueFrom: 
+                secretKeyRef:
+                  name: serviceidtyc
+                  key: SERVICEIDTYC
+            - name: HEADERRQTYC
+              valueFrom: 
+                secretKeyRef:
+                  name: headerrqtyc
+                  key: HEADERRQTYC
+            - name: SERVICETRANSACTIONTYCGUARDAR
+              valueFrom: 
+                secretKeyRef:
+                  name: servicetransactiontycguardar
+                  key: SERVICETRANSACTIONTYCGUARDAR
+            - name: SERVICEIDTYCGUARDAR
+              valueFrom: 
+                secretKeyRef:
+                  name: serviceidtycguardar
+                  key: SERVICEIDTYCGUARDAR
+            - name: HEADERRQTYCGUARDAR
+              valueFrom: 
+                secretKeyRef:
+                  name: headerrqtycguardar
+                  key: HEADERRQTYCGUARDAR
+            - name: USERIDTYC
+              valueFrom: 
+                secretKeyRef:
+                  name: useridtyc
+                  key: USERIDTYC
+            - name: ACCOUNT-SID
+              valueFrom: 
+                secretKeyRef:
+                  name: account-sid
+                  key: ACCOUNT-SID
+            - name: AUTH-TOKEN
+              valueFrom: 
+                secretKeyRef:
+                  name: auth-token
+                  key: AUTH-TOKEN
+            - name: SERVICE-ID
+              valueFrom: 
+                secretKeyRef:
+                  name: service-id
+                  key: SERVICE-ID
+            - name: BASEURLMICROSOFT
+              valueFrom:
+                secretKeyRef:
+                  name: login-microsoft
+                  key: LOGIN-MICROSOFT
+            - name: BASEURLAUTENTICACION
+              valueFrom: 
+                secretKeyRef:
+                  name: baseurlautenticacionath
+                  key: BASEURLAUTENTICACIONATH
+            - name: BASEURL
+              valueFrom: 
+                secretKeyRef:
+                  name: url-bus
+                  key: URL-BUS
+            - name: CLIENT-ID
+              valueFrom: 
+                secretKeyRef:
+                  name: ad-client-id
+                  key: AD-CLIENT-ID
+            - name: GRANT_TYPE
+              value: "client_credentials"
+            - name: RESOURCE
+              value: ""
+            - name: CLIENT_SECRET
+              valueFrom: 
+                secretKeyRef:
+                  name: client-secret
+                  key: CLIENT-SECRET
+            - name: USERNAME
+              valueFrom: 
+                secretKeyRef:
+                  name: usuario-da
+                  key: USUARIO-DA
+            - name: PASSWORD
+              valueFrom: 
+                secretKeyRef:
+                  name: contrasena-da
+                  key: CONTRASENA-DA
+            - name: HOST
+              valueFrom: 
+                secretKeyRef:
+                  name: ad-host
+                  key: AD-HOST
+            - name: SCOPE
+              valueFrom: 
+                secretKeyRef:
+                  name: scope
+                  key: SCOPE
+            - name: RSA
+              value: "RSA"              
+            - name: TENANTID
+              valueFrom:
+                secretKeyRef:
+                  name: ad-tenant-id
+                  key: AD-TENANT-ID
+            - name: BASEURL
+              valueFrom: 
+                secretKeyRef:
+                  name: url-bus
+                  key: URL-BUS
+                        
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-seguridad
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+  selector:
+    app: ms-seguridad
